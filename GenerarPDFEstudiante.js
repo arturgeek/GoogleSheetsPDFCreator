@@ -2,7 +2,7 @@ function createBulkPDFs () {
 	const docFile = DriveApp.getFileById("17m09Ey5vg07oYsNXa4FwuPd9Bn4-kjSndXbvK9NWvsM");
 	const tempFolder = DriveApp.getFolderById("14WgBfLtVriJWqyPwMtDYqJg-gmAkqBIj");
 	const pdfFolder = DriveApp.getFolderById("1-VWpj4bQi1uX9-CEspH_t8QPqWW4dCt1");
-	const currentSheet SpreadsheetApp.getActiveSpreadsheet().getSheetByName("people");
+	const currentSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("people");
 	const data = currentSheet.getRange (2, 1, currentSheet.getLastRow()-1,4).getDisplayValues();
 	let errors = [];
 	data.forEach(row => {
